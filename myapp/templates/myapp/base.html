@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mafia Game</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕵️‍♂️</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    {% block extra_head %}{% endblock %}
+    <style>
+        /* Dark theme variables */
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2c2c2c;
+            --navbar-bg: #000000;
+            --navbar-text: rgba(255,255,255,0.9);
+            --card-shadow: rgba(255,255,255,0.1);
+            --input-border: #404040;
+            --hover-bg: #363636;
+        }
+
+        /* Apply theme colors */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            background-color: var(--navbar-bg) !important;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 6px var(--card-shadow);
+        }
+
+        .list-group-item {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-color: var(--input-border);
+        }
+
+        .list-group-item:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .form-control {
+            background-color: var(--card-bg);
+            border-color: var(--input-border);
+            color: var(--text-color);
+        }
+
+        .form-control:focus {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 740px) {
+            .container {
+                padding: 10px;
+            }
+
+            .card {
+                margin: 10px 0;
+                border-radius: 10px;
+            }
+
+            .btn {
+                padding: 12px 20px;  /* Larger touch targets */
+                margin: 5px 0;
+                width: 100%;  /* Full width buttons on mobile */
+            }
+
+            .form-control {
+                height: 45px;  /* Larger input fields */
+                font-size: 16px;  /* Prevent iOS zoom on focus */
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .display-4 {
+                font-size: 2rem;  /* Smaller headers on mobile */
+            }
+
+            .lead {
+                font-size: 1.1rem;
+            }
+
+            /* Adjust spacing for mobile */
+            .mb-4 {
+                margin-bottom: 1rem !important;
+            }
+
+            .py-5 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            /* Improve touch targets */
+            .list-group-item {
+                padding: 15px;
+            }
+
+            /* Adjust card columns for mobile */
+            .col-md-6, .col-md-8 {
+                padding: 0 10px;
+            }
+
+            /* Better mobile scrolling */
+            .card-body {
+                -webkit-overflow-scrolling: touch;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+
+            /* Prevent horizontal scroll */
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /* Improve form elements on mobile */
+            select.form-control {
+                padding-right: 25px;
+            }
+
+            /* Adjust alerts for mobile */
+            .alert {
+                padding: 12px;
+                margin: 10px 0;
+            }
+
+            /* Improve mobile navigation */
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar-toggler {
+                padding: 8px;
+                margin-right: 5px;
+            }
+
+            /* Adjust icons for mobile */
+            .fa-4x {
+                font-size: 3em;
+            }
+
+            /* Improve mobile animations */
+            .hover-effect:hover {
+                transform: scale(1.02);  /* Smaller scale on mobile */
+            }
+
+            .input-group-hover:focus-within {
+                transform: translateX(5px);  /* Smaller translation on mobile */
+            }
+
+            /* Improve mobile dark mode */
+            .bg-dark {
+                background-color: #1a1a1a !important;
+            }
+
+            /* Improve touch feedback */
+            .btn:active {
+                transform: scale(0.98);
+            }
+
+            /* Prevent sticky hover states */
+            @media (hover: none) {
+                .hover-effect:hover {
+                    transform: none;
+                }
+                
+                .list-group-item:hover {
+                    transform: none;
+                }
+            }
+        }
+
+        /* Rest of your existing styles... */
+
+        footer {
+            background-color: var(--navbar-bg);
+            border-top: 1px solid var(--input-border);
+        }
+        
+        footer small {
+            opacity: 0.7;
+        }
+        
+        footer a {
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        footer a:hover {
+            opacity: 1;
+        }
+        
+        /* Add padding to main content to prevent footer overlap */
+        body {
+            padding-bottom: 40px;
+        }
+        
+        @media (max-width: 740px) {
+            footer {
+                font-size: 0.8rem;
+            }
+            
+            footer .container-fluid {
+                padding: 8px;
+            }
+            
+            footer a {
+                margin-left: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <i class="fas fa-mask me-2"></i>Mafia Game
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="navbar-nav align-items-center">
+                    {% if user.is_authenticated %}
+                        <div class="navbar-nav">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user me-2"></i>{{ user.username }}
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'change_password' %}">
+                                            <i class="fas fa-key me-2"></i>Change Password
+                                        </a>
+                                    </li>
+                                    {% if not user.is_superuser and not user.is_staff %}
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item text-danger" href="{% url 'delete_account' %}">
+                                                <i class="fas fa-user-times me-2"></i>Delete Account
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <form method="post" action="{% url 'logout' %}" class="d-inline">
+                                {% csrf_token %}
+                                <button type="submit" class="btn nav-link">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                </button>
+                            </form>
+                        </div>
+                    {% else %}
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="{% url 'login' %}">
+                                <i class="fas fa-sign-in-alt me-2"></i>Login
+                            </a>
+                            <a class="nav-link" href="{% url 'register' %}">
+                                <i class="fas fa-user-plus me-2"></i>Register
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} fade-in">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <small class="text-muted">v{{ current_version }}</small>
+                </div>
+                <div class="col-6 text-end">
+                    {% if user.is_superuser %}
+                        <a href="{% url 'admin:index' %}" class="text-muted me-3">
+                            <small><i class="fas fa-user-shield me-1"></i>Admin</small>
+                        </a>
+                    {% endif %}
+                    <a href="{% url 'report_bug' %}" class="text-muted me-3">
+                        <small><i class="fas fa-bug me-1"></i>Report Bug</small>
+                    </a>
+                    <a href="{% url 'changelog' %}" class="text-muted">
+                        <small><i class="fas fa-history me-1"></i>Changelog</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

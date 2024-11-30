@@ -1,0 +1,57 @@
+{% extends 'myapp/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">
+                    <i class="fas fa-bug me-2"></i>Report a Bug
+                </h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-heading me-2"></i>Title
+                        </label>
+                        {% render_field form.title class="form-control" placeholder="Brief description of the bug" %}
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-align-left me-2"></i>Description
+                        </label>
+                        {% render_field form.description class="form-control" placeholder="Detailed description of what happened" %}
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-list-ol me-2"></i>Steps to Reproduce
+                        </label>
+                        {% render_field form.steps_to_reproduce class="form-control" placeholder="1. First step\n2. Second step\n3. ..." %}
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">
+                            <i class="fas fa-exclamation-circle me-2"></i>Priority
+                        </label>
+                        {% render_field form.priority class="form-select" %}
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>Submit Report
+                        </button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Home
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

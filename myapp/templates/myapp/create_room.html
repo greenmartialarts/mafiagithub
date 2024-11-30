@@ -1,0 +1,97 @@
+{% extends 'myapp/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-6">
+        <div class="card bg-dark text-light border-secondary hover-card">
+            <div class="card-header text-center border-secondary">
+                <h2 class="mb-0">
+                    <i class="fas fa-plus-circle me-2"></i>Create New Room
+                </h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4 input-group-hover">
+                        <label class="form-label text-primary">
+                            <i class="fas fa-gamepad me-2"></i>Room Name
+                        </label>
+                        {{ form.room_name.errors }}
+                        {% render_field form.room_name class="form-control bg-dark text-light border-secondary" placeholder="Enter a name for your room" %}
+                        <small class="form-text text-muted">
+                            Choose a unique name for your game room
+                        </small>
+                    </div>
+                    <div class="mb-4 input-group-hover">
+                        <label class="form-label text-primary">
+                            <i class="fas fa-lock me-2"></i>Room Password (Optional)
+                        </label>
+                        {{ form.password.errors }}
+                        {% render_field form.password class="form-control bg-dark text-light border-secondary" placeholder="Set a password (optional)" %}
+                        <small class="form-text text-muted">
+                            {{ form.password.help_text }}
+                        </small>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg hover-effect">
+                            <i class="fas fa-plus-circle me-2"></i>Create Room
+                        </button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary hover-effect">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Home
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-effect {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-hover {
+    transition: all 0.3s ease;
+}
+
+.input-group-hover:focus-within {
+    transform: translateX(10px);
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    transform: scale(1.02);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+{% endblock %} 

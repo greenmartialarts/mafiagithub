@@ -1,0 +1,121 @@
+{% extends 'myapp/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">
+                        <i class="fas fa-bug me-2"></i>{{ bug.title }}
+                    </h2>
+                    <div>
+                        <span class="badge {% if bug.status == 'NEW' %}bg-danger
+                                       {% elif bug.status == 'IN_PROGRESS' %}bg-warning
+                                       {% elif bug.status == 'RESOLVED' %}bg-success
+                                       {% else %}bg-secondary{% endif %} me-2">
+                            {{ bug.get_status_display }}
+                        </span>
+                        <span class="badge {% if bug.priority == 'CRITICAL' %}bg-danger
+                                       {% elif bug.priority == 'HIGH' %}bg-warning
+                                       {% elif bug.priority == 'MEDIUM' %}bg-info
+                                       {% else %}bg-secondary{% endif %}">
+                            {{ bug.get_priority_display }} Priority
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="mb-4">
+                    <h5 class="text-muted mb-3">
+                        <i class="fas fa-info-circle me-2"></i>Description
+                    </h5>
+                    <p class="mb-0">{{ bug.description|linebreaks }}</p>
+                </div>
+
+                {% if bug.steps_to_reproduce %}
+                    <div class="mb-4">
+                        <h5 class="text-muted mb-3">
+                            <i class="fas fa-list-ol me-2"></i>Steps to Reproduce
+                        </h5>
+                        <p class="mb-0">{{ bug.steps_to_reproduce|linebreaks }}</p>
+                    </div>
+                {% endif %}
+
+                <div class="mb-4">
+                    <h5 class="text-muted mb-3">
+                        <i class="fas fa-info me-2"></i>Details
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-user me-2"></i>Reported by: 
+                            <strong>{{ bug.reporter.username|default:"Anonymous" }}</strong>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-calendar me-2"></i>Created: 
+                            <strong>{{ bug.created_at|date:"M d, Y H:i" }}</strong>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock me-2"></i>Last updated: 
+                            <strong>{{ bug.updated_at|date:"M d, Y H:i" }}</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                {% if user.is_staff %}
+                    <div class="mb-4">
+                        <h5 class="text-muted mb-3">
+                            <i class="fas fa-clipboard me-2"></i>Admin Notes
+                        </h5>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <textarea class="form-control" name="admin_notes" rows="4">{{ bug.admin_notes }}</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Status</label>
+                                <select class="form-select" name="status">
+                                    {% for value, label in bug.STATUS_CHOICES %}
+                                        <option value="{{ value }}" {% if bug.status == value %}selected{% endif %}>
+                                            {{ label }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Update Bug Report
+                            </button>
+                        </form>
+                    </div>
+                {% endif %}
+
+                <div class="d-grid gap-2">
+                    <a href="{% url 'bug_list' %}" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Bug List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .badge {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+    }
+
+    textarea.form-control {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        border-color: var(--input-border);
+    }
+
+    textarea.form-control:focus {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+    }
+</style>
+{% endblock %} 

@@ -1,0 +1,171 @@
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'recaptcha_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'recaptcha_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+widget_tweaks
+"GET /login/ HTTP/1.1" 500 184100
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/myapp/views.py", line 610, in register
+    'form': form,
+            ^^^^
+NameError: name 'form' is not defined
+"GET /register/ HTTP/1.1" 500 64927
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'recaptcha_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiawebsite/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'recaptcha_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+widget_tweaks
+"GET /login/ HTTP/1.1" 500 184100

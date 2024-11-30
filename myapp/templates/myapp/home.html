@@ -1,0 +1,98 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="text-center fade-in">
+    <h1 class="display-4 mb-4 text-glow">Welcome to Mafia Game</h1>
+    <p class="lead mb-5 text-muted">Join the ultimate game of deception and strategy</p>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-light border-secondary hover-card">
+                <div class="card-body py-5">
+                    {% if user.is_authenticated %}
+                        <div class="d-grid gap-3 col-lg-6 mx-auto">
+                            <a href="{% url 'create_room' %}" class="btn btn-primary btn-lg hover-effect">
+                                <i class="fas fa-plus-circle me-2"></i>Create Room
+                            </a>
+                            <a href="{% url 'join_room' %}" class="btn btn-success btn-lg hover-effect">
+                                <i class="fas fa-door-open me-2"></i>Join Room
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="d-grid gap-3 col-lg-6 mx-auto">
+                            <a href="{% url 'login' %}" class="btn btn-primary btn-lg hover-effect">
+                                <i class="fas fa-sign-in-alt me-2"></i>Login
+                            </a>
+                            <a href="{% url 'register' %}" class="btn btn-info btn-lg text-white hover-effect">
+                                <i class="fas fa-user-plus me-2"></i>Register
+                            </a>
+                            <a href="{% url 'join_room' %}" class="btn btn-success btn-lg hover-effect">
+                                <i class="fas fa-door-open me-2"></i>Join as Guest
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+.hover-effect {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.btn:hover::after {
+    width: 200%;
+    height: 200%;
+}
+</style>
+{% endblock %} 

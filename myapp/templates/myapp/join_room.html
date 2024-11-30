@@ -1,0 +1,156 @@
+{% extends 'myapp/base.html' %}
+{% load widget_tweaks %}
+
+{% block extra_head %}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-6">
+        <div class="card bg-dark text-light border-secondary">
+            <div class="card-header text-center border-secondary">
+                <h2 class="mb-0">
+                    <i class="fas fa-door-open me-2"></i>Join Room
+                </h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4 input-group-hover">
+                        <label class="form-label text-primary">
+                            <i class="fas fa-key me-2"></i>Room Code
+                        </label>
+                        {{ room_form.room_code.errors }}
+                        {% render_field room_form.room_code class="form-control bg-dark text-light border-secondary" placeholder="Enter 6-character code" %}
+                        <small class="form-text text-muted">
+                            Enter the 6-character room code
+                        </small>
+                    </div>
+                    
+                    <div class="mb-4 input-group-hover">
+                        <label class="form-label text-primary">
+                            <i class="fas fa-lock me-2"></i>Room Password
+                        </label>
+                        {{ room_form.password.errors }}
+                        {% render_field room_form.password class="form-control bg-dark text-light border-secondary" placeholder="Enter room password" %}
+                        <small class="form-text text-muted">
+                            Enter the room password (if required)
+                        </small>
+                    </div>
+
+                    <div class="mb-4 input-group-hover">
+                        <label class="form-label text-primary">
+                            <i class="fas fa-users me-2"></i>Players on Device
+                        </label>
+                        <input type="number" 
+                               name="player_count" 
+                               class="form-control bg-dark text-light border-secondary" 
+                               min="1" 
+                               max="10" 
+                               value="1"
+                               placeholder="Number of players">
+                        <small class="form-text text-muted">
+                            How many players will share this device?
+                        </small>
+                    </div>
+
+                    <div id="player-names">
+                        <div class="mb-4 input-group-hover">
+                            <label class="form-label text-primary">
+                                <i class="fas fa-user me-2"></i>Player 1 Name
+                            </label>
+                            <input type="text" 
+                                   name="player_name_0" 
+                                   class="form-control bg-dark text-light border-secondary" 
+                                   required
+                                   placeholder="Enter player name">
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}" data-theme="dark"></div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg hover-effect">
+                            <i class="fas fa-door-open me-2"></i>Join Room
+                        </button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary hover-effect">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Home
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-effect {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+}
+
+.input-group-hover {
+    transition: all 0.3s ease;
+}
+
+.input-group-hover:focus-within {
+    transform: translateX(10px);
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    transform: scale(1.02);
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+</style>
+
+<script>
+document.querySelector('input[name="player_count"]').addEventListener('change', function(e) {
+    const count = parseInt(e.target.value);
+    const container = document.getElementById('player-names');
+    container.innerHTML = '';
+    
+    for (let i = 0; i < count; i++) {
+        container.innerHTML += `
+            <div class="mb-4 input-group-hover">
+                <label class="form-label text-primary">
+                    <i class="fas fa-user me-2"></i>Player ${i + 1} Name
+                </label>
+                <input type="text" 
+                       name="player_name_${i}" 
+                       class="form-control bg-dark text-light border-secondary" 
+                       required
+                       placeholder="Enter player name">
+            </div>
+        `;
+    }
+});
+</script>
+{% endblock %} 

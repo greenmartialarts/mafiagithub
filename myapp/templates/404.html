@@ -1,0 +1,72 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-center py-5">
+                <div class="error-icon mb-4">
+                    <i class="fas fa-user-secret fa-5x text-primary"></i>
+                </div>
+                <h1 class="display-4 mb-4">404</h1>
+                <h2 class="mb-4">Sleeping with the Fishes</h2>
+                <p class="lead text-muted mb-4">
+                    Looks like this page got whacked by the Mafia! 
+                    Maybe it's in witness protection, or maybe it's 
+                    sleeping with the fishes. Either way, it ain't here.
+                </p>
+                <div class="d-grid gap-3 col-lg-8 mx-auto">
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home me-2"></i>Return to Safe House
+                    </a>
+                    <a href="{% url 'report_bug' %}" class="btn btn-outline-primary">
+                        <i class="fas fa-bug me-2"></i>Snitch to the Boss
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .error-icon {
+        animation: detective 3s ease-in-out infinite;
+    }
+
+    @keyframes detective {
+        0% {
+            transform: translateX(0px) rotate(0deg);
+        }
+        25% {
+            transform: translateX(-20px) rotate(-10deg);
+        }
+        75% {
+            transform: translateX(20px) rotate(10deg);
+        }
+        100% {
+            transform: translateX(0px) rotate(0deg);
+        }
+    }
+
+    .display-4 {
+        font-size: 5rem;
+        font-weight: bold;
+        color: var(--text-color);
+        text-shadow: 2px 2px 4px var(--card-shadow);
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+    .btn {
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px var(--card-shadow);
+    }
+</style>
+{% endblock %} 

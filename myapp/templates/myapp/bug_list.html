@@ -1,0 +1,120 @@
+{% extends 'myapp/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-lg-10">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">
+                        <i class="fas fa-bug me-2"></i>Bug Reports
+                    </h2>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'report_bug' %}" class="btn btn-primary">
+                            <i class="fas fa-plus-circle me-2"></i>New Report
+                        </a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="btn btn-primary">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login to Report Bug
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card-body">
+                {% if bugs %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Status</th>
+                                    <th>Priority</th>
+                                    <th>Title</th>
+                                    <th>Reporter</th>
+                                    <th>Created</th>
+                                    <th>Updated</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for bug in bugs %}
+                                    <tr class="{% if can_edit %}clickable-row{% endif %}" 
+                                        {% if can_edit %}onclick="window.location='{% url 'bug_detail' bug.id %}'"{% endif %}>
+                                        <td>
+                                            <span class="badge {% if bug.status == 'NEW' %}bg-danger
+                                                             {% elif bug.status == 'IN_PROGRESS' %}bg-warning
+                                                             {% elif bug.status == 'RESOLVED' %}bg-success
+                                                             {% else %}bg-secondary{% endif %}">
+                                                {{ bug.get_status_display }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge {% if bug.priority == 'CRITICAL' %}bg-danger
+                                                             {% elif bug.priority == 'HIGH' %}bg-warning
+                                                             {% elif bug.priority == 'MEDIUM' %}bg-info
+                                                             {% else %}bg-secondary{% endif %}">
+                                                {{ bug.get_priority_display }}
+                                            </span>
+                                        </td>
+                                        <td>{{ bug.title }}</td>
+                                        <td>{{ bug.reporter.username|default:"Anonymous" }}</td>
+                                        <td>{{ bug.created_at|date:"M d, Y H:i" }}</td>
+                                        <td>{{ bug.updated_at|date:"M d, Y H:i" }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% if not user.is_authenticated %}
+                        <div class="alert alert-info mt-4">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Note:</strong> Login to report bugs and track their status.
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="text-center py-5">
+                        <i class="fas fa-clipboard-check fa-3x mb-3 text-muted"></i>
+                        <h4>No bug reports found</h4>
+                        <p class="text-muted">There are currently no bug reports to display.</p>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'report_bug' %}" class="btn btn-primary">
+                                <i class="fas fa-plus-circle me-2"></i>Create New Report
+                            </a>
+                        {% else %}
+                            <a href="{% url 'login' %}" class="btn btn-primary">
+                                <i class="fas fa-sign-in-alt me-2"></i>Login to Report Bug
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .clickable-row {
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .clickable-row:hover {
+        background-color: var(--hover-bg);
+        transform: translateX(5px);
+    }
+
+    .badge {
+        font-size: 0.85em;
+        padding: 0.5em 0.8em;
+    }
+
+    .table th {
+        border-top: none;
+        color: var(--text-color);
+    }
+
+    .table td {
+        vertical-align: middle;
+        color: var(--text-color);
+    }
+</style>
+{% endblock %} 

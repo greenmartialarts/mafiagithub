@@ -1,0 +1,126 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-8">
+        <div class="card bg-dark text-light border-secondary">
+            <div class="card-header text-center border-secondary">
+                <h2 class="mb-0">
+                    <i class="fas fa-theater-masks me-2"></i>Role Display
+                </h2>
+            </div>
+            <div class="card-body text-center py-5" id="roleContent">
+                {% if current_player %}
+                    {% if show_role %}
+                        <h3 class="mb-4 text-primary">{{ current_player.name }}'s Role</h3>
+                        <div class="role-icon mb-4 animate__animated animate__bounceIn">
+                            <i class="fas {{ role_info.icon }} fa-4x text-{{ role_info.color }} glow-{{ role_info.color }}"></i>
+                        </div>
+                        <h4 class="text-{{ role_info.color }} mb-4">{{ role_assignment.role }}</h4>
+                        
+                        <!-- Role Information Card -->
+                        <div class="role-info mt-4">
+                            <div class="card bg-darker border-{{ role_info.color }} mb-4">
+                                <div class="card-body">
+                                    <h5 class="text-{{ role_info.color }} mb-3">Role Description</h5>
+                                    <p>{{ role_info.description }}</p>
+                                    <h5 class="text-{{ role_info.color }} mb-3">Objective</h5>
+                                    <p>{{ role_info.objective }}</p>
+                                    <h5 class="text-{{ role_info.color }} mb-3">Tips</h5>
+                                    <ul class="list-unstyled">
+                                        {% for tip in role_info.tips %}
+                                            <li class="mb-2">
+                                                <i class="fas fa-check text-{{ role_info.color }} me-2"></i>
+                                                {{ tip }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="hideAndContinue()" class="btn btn-primary btn-lg mt-4">
+                            <i class="fas fa-check me-2"></i>I Understand My Role
+                        </button>
+                    {% else %}
+                        <h4 class="mb-4">{{ current_player.name }}, are you ready to see your role?</h4>
+                        <a href="?show_role=1" class="btn btn-primary btn-lg">
+                            <i class="fas fa-eye me-2"></i>Reveal My Role
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <h4 class="text-muted">All players have viewed their roles</h4>
+                    <a href="{% url 'home' %}" class="btn btn-primary mt-3">
+                        <i class="fas fa-home me-2"></i>Back to Home
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-darker {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.glow-danger {
+    text-shadow: 0 0 1px var(--bs-danger), 0 0 2px var(--bs-danger);
+}
+
+.glow-success {
+    text-shadow: 0 0 1px var(--bs-success), 0 0 2px var(--bs-success);
+}
+
+.glow-info {
+    text-shadow: 0 0 1px var(--bs-info), 0 0 2px var(--bs-info);
+}
+
+.glow-light {
+    text-shadow: 0 0 1px var(--bs-light), 0 0 2px var(--bs-light);
+}
+
+.role-info {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+<script>
+function showRole() {
+    window.location.href = '{% url "role_display" room_code=room.room_code %}?show_role=true';
+}
+
+function hideAndContinue() {
+    fetch('/role/{{ room.room_code }}/mark-viewed/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.redirect) {
+            window.location.href = '{% url "role_display" room_code=room.room_code %}';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+}
+</script>
+{% endblock %} 

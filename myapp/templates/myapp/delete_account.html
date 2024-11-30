@@ -1,0 +1,87 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">
+                    <i class="fas fa-user-times me-2"></i>Delete Account
+                </h2>
+            </div>
+            <div class="card-body text-center">
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Warning: This action cannot be undone!
+                </div>
+                <p class="mb-4">Are you sure you want to delete your account? All your data will be permanently removed.</p>
+                <form method="post" onsubmit="return validateForm()">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label class="form-label">Type "delete" to confirm:</label>
+                        <input type="text" id="confirmDelete" class="form-control text-center" 
+                               placeholder="delete" autocomplete="off">
+                        <div id="confirmError" class="text-danger mt-2" style="display: none;">
+                            Please type "delete" to confirm
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-danger btn-lg" id="deleteBtn" disabled>
+                            <i class="fas fa-user-times me-2"></i>Delete My Account
+                        </button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const confirmInput = document.getElementById('confirmDelete');
+    const deleteBtn = document.getElementById('deleteBtn');
+    const confirmError = document.getElementById('confirmError');
+
+    confirmInput.addEventListener('input', function() {
+        const isValid = this.value.toLowerCase() === 'delete';
+        deleteBtn.disabled = !isValid;
+        confirmError.style.display = isValid ? 'none' : 'block';
+    });
+
+    function validateForm() {
+        if (confirmInput.value.toLowerCase() !== 'delete') {
+            confirmError.style.display = 'block';
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<style>
+    #confirmDelete {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    #confirmDelete:focus {
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+    }
+
+    .btn-danger {
+        transition: all 0.3s ease;
+    }
+
+    .btn-danger:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .btn-danger:not(:disabled):hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2);
+    }
+</style>
+{% endblock %} 

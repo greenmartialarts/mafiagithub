@@ -1,0 +1,243 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+
+{% block title %}{{ title }} | Mafia Game Admin{% endblock %}
+
+{% block extrastyle %}
+<style>
+    :root {
+        --primary: #2c2c2c;
+        --secondary: #1a1a1a;
+        --accent: #007bff;
+        --primary-fg: #fff;
+        --body-fg: #efefef;
+        --body-bg: #121212;
+        --header-color: #fff;
+        --link-fg: #007bff;
+        --link-hover-color: #0056b3;
+        --hairline-color: #333;
+    }
+
+    /* Main background */
+    body {
+        background-color: var(--body-bg);
+        color: var(--body-fg);
+    }
+
+    /* Header */
+    #header {
+        background: var(--primary);
+        color: var(--header-color);
+    }
+
+    #site-name a {
+        color: var(--header-color) !important;
+    }
+
+    /* Module headers */
+    .module h2, .module caption {
+        background: var(--primary);
+        color: var(--header-color);
+    }
+
+    /* Links */
+    a:link, a:visited {
+        color: var(--link-fg);
+    }
+
+    a:hover {
+        color: var(--link-hover-color);
+    }
+
+    /* Buttons */
+    .button, input[type=submit], input[type=button], .submit-row input {
+        background: var(--accent);
+        color: #fff;
+        border: none;
+    }
+
+    .button:hover, input[type=submit]:hover, input[type=button]:hover {
+        background: var(--link-hover-color);
+    }
+
+    /* Tables */
+    table {
+        background: var(--primary);
+    }
+
+    tbody tr:nth-child(odd) {
+        background: var(--secondary);
+    }
+
+    /* Form fields */
+    .form-row {
+        border-bottom: 1px solid var(--hairline-color);
+    }
+
+    .module {
+        background: var(--primary);
+        border: none;
+    }
+
+    /* Login form */
+    .login {
+        background: var(--primary);
+    }
+
+    /* Messages */
+    .messagelist li {
+        background: var(--primary) !important;
+        color: var(--body-fg) !important;
+    }
+
+    /* Breadcrumbs */
+    div.breadcrumbs {
+        background: var(--secondary);
+        color: var(--body-fg);
+    }
+
+    div.breadcrumbs a {
+        color: var(--link-fg);
+    }
+
+    /* Selected rows */
+    .row1 {
+        background: var(--primary);
+    }
+    .row2 {
+        background: var(--secondary);
+    }
+
+    /* Dashboard */
+    .dashboard .module table th {
+        background: var(--primary);
+    }
+
+    /* Input fields */
+    input[type="text"], 
+    input[type="password"], 
+    input[type="email"], 
+    input[type="number"], 
+    input[type="url"], 
+    input[type="tel"], 
+    textarea, 
+    select, 
+    .vTextField {
+        background: var(--secondary);
+        color: var(--body-fg);
+        border: 1px solid var(--hairline-color);
+    }
+
+    /* Submit row */
+    .submit-row {
+        background: var(--primary);
+        border: none;
+    }
+
+    /* Delete button */
+    .delete-button {
+        background: #dc3545 !important;
+    }
+
+    .delete-button:hover {
+        background: #c82333 !important;
+    }
+
+    /* Object tools */
+    .object-tools a {
+        background-color: var(--accent);
+    }
+
+    .object-tools a:hover {
+        background-color: var(--link-hover-color);
+    }
+
+    /* Selection boxes */
+    select[multiple] {
+        background: var(--secondary);
+        border: 1px solid var(--hairline-color);
+    }
+
+    /* Calendar widget */
+    .calendarbox, .clockbox {
+        background: var(--primary);
+        color: var(--body-fg);
+    }
+
+    .calendar td a:hover {
+        background: var(--accent);
+    }
+
+    /* Help text */
+    .help {
+        color: #888;
+    }
+
+    /* Fix dropdown menus */
+    select option {
+        background: var(--secondary);
+        color: var(--body-fg);
+    }
+
+    /* Fix inline related */
+    .inline-related {
+        background: var(--primary);
+    }
+
+    /* Fix fieldsets */
+    fieldset {
+        background: var(--primary);
+    }
+
+    /* Fix tabs */
+    .submit-row a.deletelink {
+        background: #dc3545;
+        color: #fff;
+    }
+
+    .submit-row a.deletelink:hover {
+        background: #c82333;
+    }
+
+    /* Fix list filters */
+    #changelist-filter {
+        background: var(--primary);
+    }
+
+    #changelist-filter h2 {
+        background: var(--secondary);
+    }
+
+    #changelist-filter li.selected {
+        border-left: 5px solid var(--accent);
+    }
+
+    /* Fix action buttons */
+    .actions {
+        background: var(--primary);
+    }
+
+    /* Fix pagination */
+    .paginator {
+        background: var(--primary);
+        border-top: 1px solid var(--hairline-color);
+    }
+
+    .paginator a:link, .paginator a:visited {
+        background: var(--secondary);
+    }
+
+    /* Fix related widget */
+    .related-widget-wrapper {
+        background: var(--primary);
+    }
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        🕵️‍♂️ Mafia Game Administration
+    </a>
+</h1>
+{% endblock %} 

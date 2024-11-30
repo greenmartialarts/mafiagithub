@@ -1,0 +1,289 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-8">
+        <div class="card bg-dark text-light border-secondary">
+            <div class="card-header text-center border-secondary">
+                <h2 class="mb-0">
+                    <i class="fas fa-users me-2"></i>Waiting Room
+                </h2>
+                <div class="mt-2">
+                    <span class="badge bg-secondary">Room Code: 
+                        <span id="roomCode" class="text-white" role="button" onclick="copyRoomCode()" 
+                              style="cursor: pointer;" title="Click to copy">
+                            {{ room.room_code }}
+                            <i class="fas fa-copy ms-2"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="playerCountContainer">
+                            <h3>
+                                <i class="fas fa-users me-2"></i>Players
+                                <span class="badge bg-primary">{{ players|length }}</span>
+                            </h3>
+                        </div>
+                        <ul class="list-group list-group-flush" id="playerList">
+                            {% for player in players %}
+                                <li class="list-group-item bg-dark text-light border-secondary">
+                                    {% if player.username %}
+                                        {{ player.username }}
+                                        {% if player == room.host %}
+                                            <span class="badge bg-primary">Host</span>
+                                        {% endif %}
+                                    {% else %}
+                                        {{ player.name }}
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        {% if is_host %}
+                            <div class="mb-4">
+                                <h4 class="text-primary mb-3">Role Settings</h4>
+                                <div class="mb-3 input-group-hover">
+                                    <label class="form-label">Mafia Count</label>
+                                    <input type="number" class="form-control bg-dark text-light border-secondary" 
+                                           id="mafiaCount" value="{{ room.mafia_count }}" min="1" max="5">
+                                </div>
+                                <div class="mb-3 input-group-hover">
+                                    <label class="form-label">Doctor Count</label>
+                                    <input type="number" class="form-control bg-dark text-light border-secondary" 
+                                           id="doctorCount" value="{{ room.doctor_count }}" min="0" max="2">
+                                </div>
+                                <div class="mb-3 input-group-hover">
+                                    <label class="form-label">Cop Count</label>
+                                    <input type="number" class="form-control bg-dark text-light border-secondary" 
+                                           id="copCount" value="{{ room.cop_count }}" min="0" max="2">
+                                </div>
+                                <div id="roleError" class="alert alert-danger d-none">
+                                    <i class="fas fa-exclamation-circle me-2"></i>
+                                    <span id="roleErrorMessage"></span>
+                                </div>
+                                <a href="#" onclick="startGame(event)" class="btn btn-primary w-100 hover-effect">
+                                    <i class="fas fa-play me-2"></i>Start Game
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info bg-dark text-info border-info" id="waitingMessage">
+                                <i class="fas fa-info-circle me-2"></i>Waiting for host to start the game...
+                            </div>
+                        {% endif %}
+                        
+                        <a href="{% url 'leave_room' room_code=room.room_code %}" 
+                           class="btn btn-danger w-100 hover-effect">
+                            <i class="fas fa-door-open me-2"></i>Leave Room
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-effect {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+}
+
+.input-group-hover {
+    transition: all 0.3s ease;
+}
+
+.input-group-hover:focus-within {
+    transform: translateX(10px);
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    transform: scale(1.02);
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.badge {
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+}
+
+#roomCode {
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+#roomCode:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#roomCode:active {
+    transform: scale(0.95);
+}
+
+.copy-feedback {
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.neon-green {
+    color: #39ff14 !important; /* Bright/neon green */
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; /* Neon glow effect */
+}
+</style>
+
+<script>
+    function updatePlayerList() {
+        fetch('/room/{{ room.room_code }}/players/')
+            .then(response => response.json())
+            .then(data => {
+                const playerList = document.getElementById('playerList');
+                const playerCountContainer = document.getElementById('playerCountContainer');
+                
+                playerList.innerHTML = data.player_list_html;
+                playerCountContainer.innerHTML = data.player_count_html;
+                
+                if (data.roles_assigned) {
+                    const loadingHtml = `
+                        <div class="text-center">
+                            <div class="spinner-border text-primary mb-3" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <h4>Roles assigned! Redirecting to role display...</h4>
+                        </div>
+                    `;
+                    
+                    const waitingMessage = document.getElementById('waitingMessage');
+                    if (waitingMessage) {
+                        waitingMessage.innerHTML = loadingHtml;
+                    }
+                    
+                    setTimeout(() => {
+                        window.location.href = '/role/{{ room.room_code }}/';
+                    }, 1500);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    setInterval(updatePlayerList, 1000);
+    updatePlayerList();
+
+    function startGame(event) {
+        event.preventDefault();
+        
+        const mafiaCount = document.getElementById('mafiaCount').value;
+        const doctorCount = document.getElementById('doctorCount').value;
+        const copCount = document.getElementById('copCount').value;
+        
+        // Validate role counts
+        const totalPlayers = document.querySelectorAll('#playerList .list-group-item').length;
+        const totalSpecialRoles = parseInt(mafiaCount) + parseInt(doctorCount) + parseInt(copCount);
+        
+        if (totalSpecialRoles >= totalPlayers) {
+            alert('Total special roles must be less than the number of players');
+            return;
+        }
+        
+        if (totalPlayers < 4) {
+            alert('Need at least 4 players to start the game');
+            return;
+        }
+        
+        if (mafiaCount < 1) {
+            alert('Must have at least 1 mafia');
+            return;
+        }
+        
+        // Update the room settings before assigning roles
+        fetch(`/room/{{ room.room_code }}/update-roles/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({
+                mafia_count: mafiaCount,
+                doctor_count: doctorCount,
+                cop_count: copCount
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = `/room/{{ room.room_code }}/assign-roles/`;
+            } else {
+                alert(data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while starting the game');
+        });
+    }
+
+    function copyRoomCode() {
+        const roomCode = "{{ room.room_code }}";
+        navigator.clipboard.writeText(roomCode).then(() => {
+            // Show feedback tooltip
+            const codeElement = document.getElementById('roomCode');
+            const originalText = codeElement.innerHTML;
+            codeElement.innerHTML = `
+                {{ room.room_code }}
+                <i class="fas fa-check ms-2 neon-green"></i>
+            `;
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                codeElement.innerHTML = originalText;
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy room code:', err);
+            alert('Failed to copy room code. Please try again.');
+        });
+    }
+</script>
+{% endblock %} 
