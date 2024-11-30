@@ -4,6 +4,18 @@ def get_changelog():
     """
     return [
         {
+            'version': '1.3.0',
+            'date': '2024-11-30',
+            'changes': [
+                'Added password reset functionality',
+                'Added email verification functionality',
+                'Added better error handling for login, register, and join room',
+                'Added better error handling for password reset',
+                'Added better error handling for email verification',
+                'Added faster response times',
+            ]
+        },
+        {
             'version': '1.2.0',
             'date': '2024-11-28',
             'changes': [

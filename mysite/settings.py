@@ -162,3 +162,6 @@ EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'mafiawebsiteemail@gmail.com'
 EMAIL_HOST_PASSWORD = 'fvvo udsx dsya kbbq'  # Use environment variable in production
+
+# Add this setting
+PASSWORD_RESET_URL = os.getenv('PASSWORD_RESET_URL', 'http://localhost:8000')

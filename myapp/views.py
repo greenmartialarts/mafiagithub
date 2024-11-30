@@ -25,9 +25,11 @@ from .utils.changelog import get_changelog
 from django.contrib.auth.views import LoginView
 from django.core.exceptions import ValidationError
 from .utils.turnstile import verify_turnstile
-from .utils.email import generate_verification_code, send_verification_email
+from .utils.email import generate_verification_code, send_verification_email, send_password_reset_email
 from django.core.cache import cache
 from django.utils.translation import gettext as _
+from django.utils.http import urlsafe_base64_decode
+from django.contrib.auth.tokens import default_token_generator
 
 ROLE_INFO = {
     'MAFIA': {
@@ -698,3 +700,41 @@ def resend_verification(request, user_id):
     except UserProfile.DoesNotExist:
         messages.error(request, _('Invalid user.'))
         return redirect('register')
+
+def password_reset(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        try:
+            user = User.objects.get(email=email)
+            if send_password_reset_email(user):
+                messages.success(request, 'Password reset link has been sent to your email.')
+            else:
+                messages.error(request, 'Failed to send reset email. Please try again.')
+        except User.DoesNotExist:
+            # Still show success message for security
+            messages.success(request, 'Password reset link has been sent to your email.')
+        return redirect('login')
+    return render(request, 'myapp/password_reset.html')
+
+def password_reset_confirm(request, uidb64, token):
+    try:
+        uid = urlsafe_base64_decode(uidb64).decode()
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    
+    if user is not None and default_token_generator.check_token(user, token):
+        if request.method == 'POST':
+            password1 = request.POST.get('new_password1')
+            password2 = request.POST.get('new_password2')
+            
+            if password1 and password2 and password1 == password2:
+                user.set_password(password1)
+                user.save()
+                messages.success(request, 'Your password has been reset successfully!')
+                return redirect('login')
+            else:
+                messages.error(request, 'Passwords do not match.')
+        return render(request, 'myapp/password_reset_confirm.html', {'validlink': True})
+    else:
+        return render(request, 'myapp/password_reset_confirm.html', {'validlink': False})

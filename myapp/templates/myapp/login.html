@@ -42,6 +42,12 @@
                         <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}" data-theme="dark"></div>
                     </div>
 
+                    <div class="text-center mt-3">
+                        <a href="{% url 'password_reset' %}" class="text-primary">
+                            <i class="fas fa-key me-2"></i>Forgot Password?
+                        </a>
+                    </div>
+
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary btn-lg hover-effect">
                             <i class="fas fa-sign-in-alt me-2"></i>Login

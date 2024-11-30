@@ -29,4 +29,6 @@ urlpatterns = [
     path('changelog/', views.changelog, name='changelog'),
     path('verify-email/<int:user_id>/', views.verify_email, name='verify_email'),
     path('resend-verification/<int:user_id>/', views.resend_verification, name='resend_verification'),
+    path('reset-password/', views.password_reset, name='password_reset'),
+    path('reset-password/<str:uidb64>/<str:token>/', views.password_reset_confirm, name='password_reset_confirm'),
 ] 
