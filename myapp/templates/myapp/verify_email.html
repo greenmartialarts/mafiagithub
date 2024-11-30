@@ -1,0 +1,71 @@
+{% extends 'myapp/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row justify-content-center fade-in">
+    <div class="col-md-6">
+        <div class="card bg-dark text-light border-secondary hover-card">
+            <div class="card-header text-center border-secondary">
+                <h2 class="mb-0">
+                    <i class="fas fa-envelope me-2"></i>Verify Email
+                </h2>
+            </div>
+            <div class="card-body">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} bg-dark border-{{ message.tags }} mb-4">
+                            <i class="fas {% if message.tags == 'success' %}fa-check-circle{% else %}fa-exclamation-circle{% endif %} me-2"></i>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4 input-group-hover">
+                        <label class="form-label text-primary">
+                            <i class="fas fa-key me-2"></i>Verification Code
+                        </label>
+                        <input type="text" name="verification_code" class="form-control bg-dark text-light border-secondary" 
+                               placeholder="Enter 6-digit code" maxlength="6" required>
+                        <small class="form-text text-muted">
+                            Please check your email for the verification code.
+                        </small>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg hover-effect">
+                            <i class="fas fa-check me-2"></i>Verify Email
+                        </button>
+                        <a href="{% url 'resend_verification' user_id=user_id %}" 
+                           class="btn btn-outline-primary hover-effect">
+                            <i class="fas fa-paper-plane me-2"></i>Resend Verification Code
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-effect {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+</style>
+{% endblock %} 

@@ -4,7 +4,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import JsonResponse
-from .models import Room, RoleAssignment, Player, BugReport
+from .models import Room, RoleAssignment, Player, BugReport, UserProfile
 from .forms import RoomCreationForm, JoinRoomForm, PlayerForm, CustomUserCreationForm, BugReportForm
 import random
 import string
@@ -25,6 +25,9 @@ from .utils.changelog import get_changelog
 from django.contrib.auth.views import LoginView
 from django.core.exceptions import ValidationError
 from .utils.turnstile import verify_turnstile
+from .utils.email import generate_verification_code, send_verification_email
+from django.core.cache import cache
+from django.utils.translation import gettext as _
 
 ROLE_INFO = {
     'MAFIA': {
@@ -395,14 +398,58 @@ def register(request):
         try:
             verify_turnstile(token)
             if form.is_valid():
-                user = form.save()
-                login(request, user)
-                return redirect('home')
+                # Create user but don't save yet
+                user = form.save(commit=False)
+                user.is_active = False  # User won't be able to login until email is verified
+                user.save()
+                
+                # Create user profile
+                verification_code = generate_verification_code()
+                profile = UserProfile.objects.create(
+                    user=user,
+                    verification_code=verification_code,
+                    verification_code_created=timezone.now()
+                )
+                
+                # Send verification email
+                if send_verification_email(user, verification_code):
+                    return redirect('verify_email', user_id=user.id)
+                else:
+                    messages.error(request, 'Failed to send verification email. Please try again.')
+                    user.delete()
+                    return redirect('register')
+                    
         except ValidationError as e:
             form.add_error(None, str(e))
     else:
         form = CustomUserCreationForm()
     return render(request, 'myapp/register.html', {'form': form})
+
+def verify_email(request, user_id):
+    try:
+        profile = UserProfile.objects.get(user_id=user_id)
+        if request.method == 'POST':
+            code = request.POST.get('verification_code')
+            
+            # Check if code is expired (24 hours)
+            if timezone.now() > profile.verification_code_created + timedelta(hours=24):
+                messages.error(request, 'Verification code has expired. Please request a new one.')
+                return redirect('resend_verification')
+                
+            if code == profile.verification_code:
+                profile.user.is_active = True
+                profile.email_verified = True
+                profile.user.save()
+                profile.save()
+                messages.success(request, 'Email verified successfully! You can now login.')
+                return redirect('login')
+            else:
+                messages.error(request, 'Invalid verification code. Please try again.')
+                
+        return render(request, 'myapp/verify_email.html', {'user_id': user_id})
+    except UserProfile.DoesNotExist:
+        messages.error(request, 'Invalid user.')
+        return redirect('register')
 
 @login_required
 def change_password(request):
@@ -621,3 +668,33 @@ class CustomLoginView(LoginView):
             form.add_error(None, str(e))
             return self.form_invalid(form)
         return super().form_valid(form)
+
+def resend_verification(request, user_id):
+    try:
+        # Check rate limiting
+        cache_key = f'resend_email_{user_id}'
+        if cache.get(cache_key):
+            messages.error(request, _('Please wait at least 1 minute before requesting another code.'))
+            return redirect('verify_email', user_id=user_id)
+            
+        profile = UserProfile.objects.get(user_id=user_id)
+        
+        # Generate new verification code
+        verification_code = generate_verification_code()
+        profile.verification_code = verification_code
+        profile.verification_code_created = timezone.now()
+        profile.save()
+        
+        # Send new verification email
+        if send_verification_email(profile.user, verification_code):
+            messages.success(request, _('A new verification code has been sent to your email.'))
+            # Set rate limit for 1 minute
+            cache.set(cache_key, True, 60)
+        else:
+            messages.error(request, _('Failed to send verification email. Please try again.'))
+            
+        return redirect('verify_email', user_id=user_id)
+        
+    except UserProfile.DoesNotExist:
+        messages.error(request, _('Invalid user.'))
+        return redirect('register')

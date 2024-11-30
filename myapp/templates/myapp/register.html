@@ -27,8 +27,11 @@
                         <div class="mb-4 input-group-hover">
                             <label class="form-label text-primary">
                                 <i class="fas {% if field.name == 'username' %}fa-user
+                                           {% elif field.name == 'first_name' %}fa-user-tag
+                                           {% elif field.name == 'last_name' %}fa-user-tag
+                                           {% elif field.name == 'email' %}fa-envelope
                                            {% elif 'password' in field.name %}fa-key
-                                           {% else %}fa-envelope{% endif %} me-2"></i>
+                                           {% endif %} me-2"></i>
                                 {{ field.label }}
                             </label>
                             {% if field.errors %}

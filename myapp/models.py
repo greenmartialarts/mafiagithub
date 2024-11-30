@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.utils import timezone
 
 class Player(models.Model):
     name = models.CharField(max_length=100)
@@ -101,3 +102,12 @@ class BugReport(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.priority} Priority"
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    email_verified = models.BooleanField(default=False)
+    verification_code = models.CharField(max_length=6, blank=True, null=True)
+    verification_code_created = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.user.username}'s profile"

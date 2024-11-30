@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .code { font-size: 24px; font-weight: bold; color: #007bff; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Mafia Game!</h2>
+        <p>Thank you for registering, {{ username }}. Please verify your email address by entering the following code:</p>
+        <p class="code">{{ verification_code }}</p>
+        <p>This code will expire in 24 hours.</p>
+        <p>If you didn't register for Mafia Game, please ignore this email.</p>
+    </div>
+</body>
+</html> 
