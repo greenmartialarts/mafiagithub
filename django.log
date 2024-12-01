@@ -333,3 +333,1096 @@ You're accessing the development server over HTTPS, but it only supports HTTP.
 You're accessing the development server over HTTPS, but it only supports HTTP.
 You're accessing the development server over HTTPS, but it only supports HTTP.
 You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /room/RAKVDG/kick/47/
+"GET /room/RAKVDG/kick/47/ HTTP/1.1" 404 7605
+Not Found: /room/RAKVDG/kick/47/
+"GET /room/RAKVDG/kick/47/ HTTP/1.1" 404 7605
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69590
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    elif is_host:
+         ^^^^^^^
+NameError: name 'is_host' is not defined
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69554
+"GET /room/6EZPYE/players/ HTTP/1.1" 500 69669
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    room.save()
+             ^^^
+NameError: name 'is_host' is not defined
+Internal Server Error: /room/6EZPYE/players/
+Traceback (most recent call last):
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arnavshah/Documents/mafiagit/myapp/views.py", line 378, in get_player_list
+    room.save()
+             ^^^
+NameError: name 'is_host' is not defined
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.

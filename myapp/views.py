@@ -83,6 +83,19 @@ ROLE_INFO = {
         ],
         'icon': 'fa-user',
         'color': 'light'
+    },
+    'NARRATOR': {
+        'description': 'The game moderator who guides the game and ensures rules are followed.',
+        'objective': 'Facilitate the game, maintain order, and ensure fair play.',
+        'tips': [
+            'Keep track of all players and their status',
+            'Maintain the game flow and timing',
+            'Ensure all players follow the rules',
+            'Make clear announcements for day/night phases',
+            'Keep the game engaging and dramatic'
+        ],
+        'icon': 'fa-gavel',
+        'color': 'warning'
     }
 }
 
@@ -204,11 +217,14 @@ def assign_roles(request, room_code):
         messages.error(request, 'Only the host can assign roles')
         return redirect('waiting_room', room_code=room_code)
 
-    # Get all players (both authenticated and temporary)
+    # Get all players
     all_players = list(room.players.all()) + list(room.temp_players.all())
-    roles = (['MAFIA'] * room.mafia_count +
-             ['DOCTOR'] * room.doctor_count +
-             ['COP'] * room.cop_count)
+    
+    # Always assign narrator first
+    roles = ['NARRATOR'] + \
+            ['MAFIA'] * room.mafia_count + \
+            ['DOCTOR'] * room.doctor_count + \
+            ['COP'] * room.cop_count
     
     # Fill remaining with villagers
     roles += ['VILLAGER'] * (len(all_players) - len(roles))
@@ -609,20 +625,20 @@ def update_roles(request, room_code):
         room.doctor_count = int(data.get('doctor_count', 0))
         room.cop_count = int(data.get('cop_count', 0))
         
-        # Validate role counts
+        # Validate role counts - include narrator in total
         total_players = room.players.count() + room.temp_players.count()
-        total_special_roles = room.mafia_count + room.doctor_count + room.cop_count
+        total_special_roles = room.mafia_count + room.doctor_count + room.cop_count + 1  # +1 for narrator
         
         if total_special_roles >= total_players:
             return JsonResponse({
                 'success': False, 
-                'error': 'Total special roles must be less than number of players'
+                'error': 'Total special roles (including narrator) must be less than number of players'
             })
         
-        if total_players < 4:
+        if total_players < 5:  # Minimum 5 players: 1 narrator + 1 mafia + 3 others
             return JsonResponse({
                 'success': False, 
-                'error': 'Need at least 4 players to start the game'
+                'error': 'Need at least 5 players to start the game'
             })
         
         if room.mafia_count < 1:

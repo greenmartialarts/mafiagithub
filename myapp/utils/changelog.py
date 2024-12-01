@@ -4,6 +4,15 @@ def get_changelog():
     """
     return [
         {
+            'version': '1.3.1',
+            'date': '2024-12-01',
+            'changes': [
+                'Added dedicated narrator role',
+                'Updated role validation to account for narrator',
+                'Modified role assignment logic to include narrator'
+            ]
+        },
+        {
             'version': '1.3.0',
             'date': '2024-11-30',
             'changes': [

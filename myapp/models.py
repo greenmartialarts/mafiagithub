@@ -47,6 +47,7 @@ class Room(models.Model):
 
 class RoleAssignment(models.Model):
     ROLE_CHOICES = [
+        ('NARRATOR', 'Narrator'),
         ('MAFIA', 'Mafia'),
         ('DOCTOR', 'Doctor'),
         ('COP', 'Cop'),
