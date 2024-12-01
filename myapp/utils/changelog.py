@@ -13,6 +13,7 @@ def get_changelog():
                 'Added better error handling for password reset',
                 'Added better error handling for email verification',
                 'Added faster response times',
+                'Added better styling for password reset and email verification',
             ]
         },
         {
